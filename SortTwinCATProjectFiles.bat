@@ -6,4 +6,4 @@ REM The project-files noted here can be sorted.
 REM Make sure the 'Device' nodes are NOT sorted, as show below.
 REM (Demcon - Ruud Jeurissen - 11-04-2019)
 
-XmlSorter.exe "<solution_folder>" "tsproj;xti;plcproj" "Device"
+XmlSorter.exe "<solution_folder>" "tsproj;xti;plcproj" "Device;DeploymentEvents"
