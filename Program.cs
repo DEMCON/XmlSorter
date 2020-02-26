@@ -99,7 +99,16 @@ namespace Demcon.XmlSorter
 
             // write
             XDocument destXDoc = new XDocument(srcXDoc.Declaration, sortedNode);
-            string destText = srcXDoc.Declaration.ToString() + "\r\n" + destXDoc.ToString();
+            string destText;
+            if (srcXDoc.Declaration != null)
+            {
+                destText = srcXDoc.Declaration.ToString() + "\r\n" + destXDoc.ToString();
+            }
+            else
+            {
+                destText = destXDoc.ToString();
+            }
+            
             File.WriteAllText(pathFilename, destText);
         }
 
